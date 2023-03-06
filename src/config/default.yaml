@@ -1,0 +1,16 @@
+ping:
+  running: true
+  server: "8.8.8.8" #vtt test network 5G server: "100.100.1.1"; from commercial net: "130.188.225.66"
+  interval: 0.2
+iperf:
+  running: true
+  server: "172.17.0.1" #"130.188.225.66" #vtt test network 5G server: "100.100.1.1"; from commercial net: "130.188.225.66"
+  port: 5201 # choose 30001, 30002, 30003, 30004
+  direction: "downlink"  # choose "uplink", "downlink"
+  bitrate: "1M"
+  time: 3600 # number of seconds iperf is executed for
+  interval: 0.2 # interval between iperf messages
+  traffic: "tcp" # choose "tcp", "udp"
+  buffer_len: "56K"
+  window: "256K"
+  parallel: 1 #parallel connections
