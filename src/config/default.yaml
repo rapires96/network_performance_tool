@@ -1,6 +1,6 @@
 ping:
   running: true
-  server: "8.8.8.8" #vtt test network 5G server: "100.100.1.1"; from commercial net: "130.188.225.66"
+  server: "172.17.0.1" #vtt test network 5G server: "100.100.1.1"; from commercial net: "130.188.225.66"
   interval: 0.2
 iperf:
   running: true

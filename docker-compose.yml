@@ -1,0 +1,8 @@
+version: "2.3"
+services:
+  logic:
+    build: .
+    environment:
+      - APP_CONFIG=config/default.yaml
+    volumes:
+      - ./src/config:/app/config

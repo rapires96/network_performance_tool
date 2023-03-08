@@ -45,8 +45,8 @@ func (p *Process) startPing(wg *sync.WaitGroup) { //
 		time.Sleep(200*time.Millisecond)
 	}
 
-	if err := scanner.Err(); err != nil {log.Panic("Error handling stdout")}
-	if err := cmd.Wait(); err != nil {log.Panic("Error waiting for command:", err)}
+	if err := scanner.Err(); err != nil {log.Panic("Error handling stdout: ping pipe\n", err)}
+	if err := cmd.Wait(); err != nil {log.Panic("Error waiting for command: ping\n Verify your internet connectivity\n", err)}
 }
 
 func (p *Process) startIperf(wg *sync.WaitGroup) { //
@@ -79,6 +79,7 @@ func (p *Process) startIperf(wg *sync.WaitGroup) { //
 		time.Sleep(200*time.Millisecond)
 	}
 
-	if err = scanner.Err(); err != nil {log.Panic("error handling out ", err) }
-	if err := cmd.Wait(); err != nil { log.Panic("Error waiting for command:", err) }
+	if err = scanner.Err(); err != nil {log.Panic("error handling out: iperf3 pipe\n", err) }
+	if err := cmd.Wait(); err != nil { log.Panic("Error waiting for command iperf3\n",
+	"Make sure that your iperf3 server is running and it can be reache by the application\n", err) }
 }
