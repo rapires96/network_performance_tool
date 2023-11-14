@@ -1,0 +1,9 @@
+db:
+  running: true #true|false, true sends to database and false prints in stdout
+  bucket: "networktool"
+  org: "my-org"
+  tocken: "46d303931c4bcc44f4743871414987d413a81a3860dc8e722db2bbe6e047ce6e"
+  url: "http://172.100.1.2:8086"
+units:
+  rtt: "ms"
+  throughput: "Mbps"

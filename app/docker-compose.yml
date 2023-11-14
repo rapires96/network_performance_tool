@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  logic:
+    build: ./src
+    env_file:
+      - ./src/.env
+    volumes:
+      - ./config:/app/config
+    networks:
+      app_subnet:
+        ipv4_address: 172.100.1.7
+
+networks:
+  app_subnet:
+    external: true
+    name: app_subnet

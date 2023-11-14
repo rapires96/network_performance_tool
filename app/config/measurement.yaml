@@ -1,0 +1,19 @@
+ping:
+  running: true #true|false
+  server: "172.100.1.20" #
+  interval: 0.2
+iperf:
+  running: true
+  server: "172.100.1.20" #
+  port: 5201 
+  direction: "downlink"  # choose "uplink", "downlink"
+  bitrate: "1M"
+  time: 3600 # number of seconds iperf is executed for
+  interval: 0.2 # interval between iperf messages
+  traffic: "tcp" # choose "tcp", "udp"
+  buffer_len: "56K"
+  window: "256K"
+  parallel: 1 #parallel connections
+units:
+  rtt: "ms"
+  throughput: "Mbps"
